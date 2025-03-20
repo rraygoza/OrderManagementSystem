@@ -8,3 +8,6 @@
 /Shared/obj
 /CustomerService/obj
 /.vs
+/OrderSystemUI/.angular
+/OrderSystemUI/node_modules
+/OrderSystemUI/.vscode

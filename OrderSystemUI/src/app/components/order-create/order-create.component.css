@@ -1,0 +1,6 @@
+/* src/app/components/order-create/order-create.component.css */
+/* Add any custom styles here.  Material styles are already included. */
+.error-snackbar {
+    background-color: #f44336; /* Red */
+    color: white;
+}

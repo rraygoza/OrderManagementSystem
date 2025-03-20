@@ -1,0 +1,10 @@
+/* src/app/components/product-list/product-list.component.css */
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Adjust as needed */
+ }
+ .product-list-text{
+    color: black;
+ }

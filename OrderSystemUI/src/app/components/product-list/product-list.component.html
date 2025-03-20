@@ -1,0 +1,13 @@
+<h2>Products</h2>
+
+<div *ngIf="isLoading" class="spinner-container">
+  <mat-spinner></mat-spinner>
+</div>
+
+<mat-list *ngIf="!isLoading">
+  <mat-list-item *ngFor="let product of products">
+    <span class="product-list-text">
+      {{ product.name }} - ${{ product.price }}
+    </span>
+  </mat-list-item>
+</mat-list>

@@ -1,0 +1,27 @@
+<mat-card>
+  <mat-card-title>Create Order</mat-card-title>
+  <mat-card-content>
+      <form (ngSubmit)="onSubmit()">
+          <mat-form-field appearance="fill">
+              <mat-label>Product</mat-label>
+              <mat-select id="product" name="product" [(ngModel)]="selectedProductId" required>
+                  <mat-option *ngFor="let product of products" [value]="product.id">
+                      {{ product.name }}
+                  </mat-option>
+              </mat-select>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>
+                Customer
+            </mat-label>
+            <input matInput type="text" id="customerId" name="customer" [(ngModel)]="selectedCustomerId" required>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+              <mat-label>Quantity</mat-label>
+              <input matInput type="number" id="quantity" name="quantity" [(ngModel)]="quantity" required min="1">
+          </mat-form-field>
+
+          <button mat-raised-button color="primary" type="submit">Create Order</button>
+      </form>
+  </mat-card-content>
+</mat-card>

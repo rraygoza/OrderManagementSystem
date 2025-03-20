@@ -1,0 +1,10 @@
+/* src/app/components/order-list/order-list.component.css */
+table {
+    width: 100%;
+}
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Adjust as needed */
+}
