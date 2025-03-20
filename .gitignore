@@ -1,0 +1,10 @@
+/.vs/OrderManagementSystem/copilot-chat
+/.vs/OrderManagementSystem/CopilotIndices
+/CustomerService/bin/Debug
+/OrderService/bin
+/OrderService/obj
+/ProductService/bin
+/ProductService/obj
+/Shared/obj
+/CustomerService/obj
+/.vs

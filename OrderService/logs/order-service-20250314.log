@@ -1,0 +1,252 @@
+2025-03-14 14:51:34.084 -06:00 [INF] No migrations were found in assembly 'OrderService'. A migration needs to be added before the database can be updated.
+2025-03-14 14:52:17.458 -06:00 [INF] No migrations were found in assembly 'OrderService'. A migration needs to be added before the database can be updated.
+2025-03-14 14:53:21.218 -06:00 [INF] No migrations were found in assembly 'OrderService'. A migration needs to be added before the database can be updated.
+2025-03-14 14:53:22.556 -06:00 [INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-03-14 14:53:22.613 -06:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-03-14 14:53:22.718 -06:00 [INF] Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2025-03-14 14:53:23.458 -06:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2025-03-14 14:53:23.505 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-03-14 14:53:23.510 -06:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-03-14 14:53:23.524 -06:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-03-14 14:53:23.562 -06:00 [INF] No migrations were applied. The database is already up to date.
+2025-03-14 14:53:23.569 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2025-03-14 14:53:23.731 -06:00 [INF] User profile is available. Using 'C:\Users\rafael.raygoza\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-14 14:53:24.983 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44353/swagger - null null
+2025-03-14 14:53:25.233 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-14 14:53:25.235 -06:00 [INF] Hosting environment: Development
+2025-03-14 14:53:25.236 -06:00 [INF] Content root path: C:\Users\rafael.raygoza\source\repos\OrderManagementSystem\OrderService
+2025-03-14 14:53:26.178 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44353/swagger/index.html - null null
+2025-03-14 14:53:26.206 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44353/swagger - 301 null null 1254.0437ms
+2025-03-14 14:53:26.317 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44353/swagger/index.html - 200 null text/html;charset=utf-8 138.9025ms
+2025-03-14 14:53:26.332 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44353/_vs/browserLink - null null
+2025-03-14 14:53:26.343 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44353/swagger/swagger-ui-bundle.js - null null
+2025-03-14 14:53:26.347 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44353/swagger/swagger-ui-standalone-preset.js - null null
+2025-03-14 14:53:26.354 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44353/swagger/swagger-ui.css - null null
+2025-03-14 14:53:26.354 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44353/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-14 14:53:26.381 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44353/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 8.5624ms
+2025-03-14 14:53:26.428 -06:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-03-14 14:53:26.428 -06:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-03-14 14:53:26.428 -06:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-03-14 14:53:26.431 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44353/swagger/swagger-ui.css - 200 143943 text/css 77.6795ms
+2025-03-14 14:53:26.471 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44353/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 124.8646ms
+2025-03-14 14:53:26.492 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44353/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 159.7828ms
+2025-03-14 14:53:28.435 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44353/_vs/browserLink - 404 null null 2102.8279ms
+2025-03-14 14:53:28.526 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44353/swagger/v1/swagger.json - null null
+2025-03-14 14:53:28.545 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44353/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.0001ms
+2025-03-14 14:53:28.719 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44353/swagger/favicon-32x32.png - null null
+2025-03-14 14:53:28.721 -06:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-03-14 14:53:28.723 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44353/swagger/favicon-32x32.png - 200 628 image/png 4.1211ms
+2025-03-14 14:54:44.229 -06:00 [INF] Request starting HTTP/1.1 POST https://localhost:44353/api/Orders - application/json 60
+2025-03-14 14:54:44.667 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-03-14 14:54:44.671 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2025-03-14 14:54:44.694 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-14 14:54:44.701 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-14 14:54:44.705 -06:00 [INF] Request finished HTTP/1.1 POST https://localhost:44353/api/Orders - 401 null null 475.9182ms
+2025-03-14 14:55:22.588 -06:00 [INF] Request starting HTTP/1.1 POST https://localhost:44353/api/Orders - application/json 60
+2025-03-14 14:55:22.625 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-03-14 14:55:22.626 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2025-03-14 14:55:22.629 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-14 14:55:22.630 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-14 14:55:22.633 -06:00 [INF] Request finished HTTP/1.1 POST https://localhost:44353/api/Orders - 401 null null 44.605ms
+2025-03-14 14:56:07.802 -06:00 [INF] Request starting HTTP/1.1 POST https://localhost:44353/api/Orders - application/json 60
+2025-03-14 14:56:07.844 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-03-14 14:56:07.845 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2025-03-14 14:56:07.849 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-14 14:56:07.850 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-14 14:56:07.852 -06:00 [INF] Request finished HTTP/1.1 POST https://localhost:44353/api/Orders - 401 null null 53.6366ms
+2025-03-14 14:57:51.342 -06:00 [INF] No migrations were found in assembly 'OrderService'. A migration needs to be added before the database can be updated.
+2025-03-14 14:57:52.826 -06:00 [INF] Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-03-14 14:57:52.871 -06:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-03-14 14:57:52.913 -06:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2025-03-14 14:57:53.431 -06:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2025-03-14 14:57:53.457 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-03-14 14:57:53.462 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-03-14 14:57:53.473 -06:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-03-14 14:57:53.487 -06:00 [INF] No migrations were applied. The database is already up to date.
+2025-03-14 14:57:53.493 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2025-03-14 14:57:53.559 -06:00 [INF] User profile is available. Using 'C:\Users\rafael.raygoza\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-14 14:57:54.119 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44353/swagger/index.html - null null
+2025-03-14 14:57:54.531 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-14 14:57:54.535 -06:00 [INF] Hosting environment: Development
+2025-03-14 14:57:54.535 -06:00 [INF] Content root path: C:\Users\rafael.raygoza\source\repos\OrderManagementSystem\OrderService
+2025-03-14 14:57:54.993 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44353/_vs/browserLink - null null
+2025-03-14 14:57:54.994 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44353/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-14 14:57:55.001 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44353/swagger/index.html - 200 null text/html;charset=utf-8 920.192ms
+2025-03-14 14:57:55.007 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44353/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 9.1346ms
+2025-03-14 14:57:57.078 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44353/_vs/browserLink - 404 null null 2085.1894ms
+2025-03-14 14:57:57.154 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44353/swagger/v1/swagger.json - null null
+2025-03-14 14:57:57.185 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44353/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 31.6119ms
+2025-03-14 14:58:01.063 -06:00 [INF] Request starting HTTP/1.1 POST https://localhost:44353/api/Orders - application/json 60
+2025-03-14 14:58:01.417 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-03-14 14:58:01.430 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2025-03-14 14:58:01.463 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-14 14:58:01.478 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-14 14:58:01.483 -06:00 [INF] Request finished HTTP/1.1 POST https://localhost:44353/api/Orders - 401 null null 419.7752ms
+2025-03-14 14:58:41.768 -06:00 [INF] Request starting HTTP/1.1 POST https://localhost:44353/api/Orders - application/json 60
+2025-03-14 14:58:41.794 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-03-14 14:58:41.795 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2025-03-14 14:58:41.798 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-14 14:58:41.799 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-14 14:58:41.801 -06:00 [INF] Request finished HTTP/1.1 POST https://localhost:44353/api/Orders - 401 null null 33.7877ms
+2025-03-14 14:58:58.955 -06:00 [INF] Request starting HTTP/1.1 POST https://localhost:44353/api/Orders - application/json 60
+2025-03-14 14:58:58.958 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-03-14 14:58:58.960 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2025-03-14 14:58:58.962 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-14 14:58:58.963 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-14 14:58:58.966 -06:00 [INF] Request finished HTTP/1.1 POST https://localhost:44353/api/Orders - 401 null null 11.2616ms
+2025-03-14 14:59:04.854 -06:00 [INF] Request starting HTTP/1.1 POST https://localhost:44353/api/Orders - application/json 60
+2025-03-14 14:59:04.856 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-03-14 14:59:04.857 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2025-03-14 14:59:04.859 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-14 14:59:04.860 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-14 14:59:04.863 -06:00 [INF] Request finished HTTP/1.1 POST https://localhost:44353/api/Orders - 401 null null 8.9397ms
+2025-03-14 14:59:18.146 -06:00 [INF] Request starting HTTP/1.1 POST https://localhost:44353/api/Orders - application/json 60
+2025-03-14 14:59:18.148 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-03-14 14:59:18.150 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2025-03-14 14:59:18.151 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-14 14:59:18.151 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-14 14:59:18.183 -06:00 [INF] Request finished HTTP/1.1 POST https://localhost:44353/api/Orders - 401 null null 7.0691ms
